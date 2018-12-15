@@ -16,14 +16,17 @@
 
 
 /* Column Styles */
-article{
+/* Styles within this section will affect the article eement in the HTML document. */
+/* The selector belwo states that the article element will be affected by the styles listed. The column width property gives the element the specified width. The column gap property gives the element a gap of 20 in between each column. The column rule property adds a line in between each column of the specified measure and color. The widows and orphans properties set the minimum number of word that are left behind when the page is collapsed. */
+article {
     column-width: 260px;
     column-gap: 20px;
     column-rule: 1px solid rgb(154, 64, 31);
     widows: 2;
-    orphans: 2; 
-}
-article h1{
-    column-span: all;
+    orphans: 2;
 }
 
+/* the selector states that the h1 element nested within the article element will span every column.  */
+article h1 {
+    column-span: all;
+}

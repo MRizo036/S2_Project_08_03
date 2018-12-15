@@ -44,7 +44,7 @@
         line-height: 2em;
     }
 
-    /* The selector below states that the td element will have the styles listed applied to it. The border property adds a border around the element of the specified values. The position property gives the element a relative position on the page. The padding left property adds a padding of 40% on the left of the element. The min height element states that the element will have a minimum height of 40px. */
+    /* The selector below states that the td element will have the styles listed applied to it. The border property adds a border around the element of the specified values. The position property gives the element a relative position on the page. The padding left property adds a padding of 45% on the left of the element. The min height element states that the element will have a minimum height of 40px. */
     td {
         border: 1px dotted grey;
         color: rgb(11, 12, 145);
@@ -53,12 +53,13 @@
         min-height: 40px;
     }
 
-    /* The selector states that the  */
+    /* The selector states that all odd re elements within the HTML document will be affected.  */
     tr:nth-of-type(odd) {
         background-color: rgb(255, 235, 178);
         border: 2px solid grey;
     }
 
+    /* The selector states that the td element is being affected by the styles lised. The before psuedo element specifies that these styles will be applied to the first child of the selected element, in this case the td element. The content property inserts the attribute content specified onto the page. The top property gives the element a top spacing of 0 while the left property gives the element a left spacing of 0 as well. The width property states that the elemet will have a width of 40% of its container. The padding property adds a padding around the element of 5px. */
     td::before {
         content: attr(data-date);
         position: absolute;
@@ -75,8 +76,10 @@
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
    =============================================
-*/
-@media only screen and (min-width: 641px) {
+   /* Styles within this sections will affect screens with a screen width of 640px or greater. */
+*/ @media only screen and (min-width: 641px) {
+
+    /* Styles within this section will affect the tabel element. The background property adds the specified background image with the specified location and size. The boder collapse property collapses the borders of the table element. The table layout states that the table will be fixed in position. */
     table {
         background: url(lht_photo1.png) bottom right/40% no-repeat;
         border: 6px double rgb(154, 64, 3);
@@ -86,6 +89,7 @@
         width: 85%;
     }
 
+    /* The selector states that the styles listed will be applied to the th and td elements in the HTML document. The font weight property gives the text a weigth of normal. The vertical top property aligns the text content int he table cells to the top of their container. The word wrap property states that words can be broken on the page.  */
     th,
     td {
         border: 1px solid grey;
@@ -97,16 +101,19 @@
         word-wrap: break-word;
     }
 
+    /* Styles within this section will affect the td elements in the HTMl documnet.  */
     td {
         background-color: rgba(171, 171, 171, 0.6);
         color: rgb(11, 12, 145);
     }
 
+    /* The selector states that the td elements that contain an attribute of data date with the word Feb. The box shadow property adds a box shadow of the specified dimensions inside of the element.   */
     td[data-date*="Feb"] {
         background-color: rgba(232, 214, 148, 0.6);
         box-shadow: inset grey 0px 0px 20px;
     }
 
+    /* Styles within this section will be applied to the caption element nested within the table element. The letter spacing property adds space between each letter of the text. */
     table caption {
         vertical-align: top;
         text-align: center;
@@ -115,6 +122,7 @@
         letter-spacing: 3px;
     }
 
+    /* Styles within this section will affect the th element that is nested within the thead element.  */
     thead th {
         background-color: rgb(154, 64, 3);
         color: white;
